@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/mcp-settings.json",
+  "mcpServers": {
+    "freshdesk-stdio": {
+      "command": "python",
+      "args": [
+        "-m",
+        "freshdesk_mcp.server",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "FRESHDESK_DOMAIN": "your-company",
+        "FRESHDESK_API_KEY": "your_api_key_here",
+        "FRESHDESK_TIMEOUT": "15.0",
+        "FRESHDESK_MAX_RETRIES": "3",
+        "FRESHDESK_MAX_PAGES": "5",
+        "MCP_TRANSPORT": "stdio",
+        "LOG_LEVEL": "INFO"
+      }
+    },
+    "freshdesk-streamable-http": {
+      "url": "http://127.0.0.1:8000/mcp",
+      "transport": "streamable-http"
+    }
+  }
+}
